@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgb(130, 130, 219);
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    /* padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;*/
+    transition: all 0.5s ease-in-out;
+    margin: 8px 0;
+    border-radius: 8px;
+    margin-left: -1px;
+}
+.menu li:hover,
+.active{
+    background: #e0e0e058;
+}
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* gap: 1.5rem; */
+    gap: .5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+.side-icon{
+    padding: .8rem;
+    height: 50px;
+    width: 50px;
+}
+/* main body section */
+.main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+.header-wrapper img{
+width: 50px;
+height: 50px;
+cursor: pointer;
+border-radius: 50%;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header-title{
+    color:  rgb(130, 130, 219);
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+/* card container */
+.card-container{
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main-title{
+    color: cornflowerblue;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.payment-card{
+    background: rgb(299, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 260px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.payment-card:hover{
+    transform: translateY(-5px);
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount-value{
+    font-size: 24px;
+    font-weight: 600;
+}
+.icon{
+    /* color: white; */
+    padding: .8rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+     /* font-size: 1.5rem; */
+     background: red;
+}
+.card-detail{
+    font-size: 18px;
+    color: #777;
+    letter-spacing: 2px;
+}
+.light-red{
+    background: rgb(251, 233, 233);
+}
+.light-purple{
+    background: rgb(254, 226, 254);
+}
+.light-green{
+    background: rgb(235, 254, 235);
+}
+.light-blue{
+    background: rgb(236, 236, 254);
+}
+.dark-red{
+    background: red;
+}
+.dark-purple{
+    background: purple;
+}
+.dark-green{
+    background: green;
+}
+.dark-blue{
+    background: blue;
+}
+/* tabuler section */
+.tabular-wrapper{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.table-container{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background:  rgb(130, 130, 219);
+    color: white;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: white;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+}
+.delete_product_btn{
+    color: red;
+    margin: 20px;
+    font-size: 20px;
+}
+/* this is  for when product is empty in product.php */
+.empty_text{
+    /* background: cornflowerblue; */
+   background:  rgb(130, 130, 219);
+    margin-right: 10px;
+    font-size: 25px;
+}
+.add-admin-btn{
+    display: block;
+    width: 15%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    font-size: 20px;
+    background: cornflowerblue;
+    color: white;
+    margin-left: 880px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.add-admin-btn:hover{
+        transform: translateY(-5px);
+        background: lightgreen;
+        color: blue;
+}
+
+
+    /* adduser.php */
+section{
+     display: flex;
+     justify-content: center;
+    width: 100%;
+    background:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.addadmin-box{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.addadminbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+}
+.addadminbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:valid ~ label,
+input:focus ~ label{
+    top: -12px;
+} 
+.addadminbox input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+}
+.loginbtn{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.opt{
+    background: rgb(65, 65, 95);
+    color: white;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+
+}
+
+/* order_table.php */
+.view_product_btn{
+    color: rgb(47, 145, 47);
+    margin: 20px;
+    font-size: 20px;
+}
+
+/* addcategory.php */
+.addcategory_container{
+    background: cornflowerblue;
+    color: white;
+    height: 300px;
+    width: 400px;
+    margin: 150px;
+    margin-left: 480px;
+}
+.addcategory_heading{
+    text-align: center;
+    margin-top: 30px;
+}
+.addcategory_inputbox{
+    width: 300px;;
+    height: 35px;
+    margin: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.addcategory_btn{
+    width: 40%;
+    font-size: 20px;
+    margin: 20px;
+    background: green;
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;
+    margin-left: 50px;
+}
+.addcategory_btn:hover{
+    background: rgb(2, 77, 2);
+}
+
+.addcategory_cancel_btn{
+    display: inline-block;
+    background: red;
+    width: 120px;
+    text-align: center;
+    padding: 3px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.addcategory_cancel_btn:hover{
+    background: rgb(128, 17, 17);
+} 
+
+/* update_category.php */
+.updatecategory_btn{
+    width: 50%;
+    font-size: 20px;
+    margin: 20px;
+    background: green;
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;
+    margin-left: 30px;
+}
+.updatecategory_btn:hover{
+    background: rgb(2, 77, 2);
+}

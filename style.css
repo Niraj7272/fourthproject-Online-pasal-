@@ -1,0 +1,22 @@
+/* index.php */
+.indexbody{
+    padding: 0;
+    margin: 0;
+}
+#main{
+    height: 500px;
+    width: 100%;
+    
+}
+.indeximg{
+    height: 500px;
+    width: 100%;
+}
+/* include 'header.php' */
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+

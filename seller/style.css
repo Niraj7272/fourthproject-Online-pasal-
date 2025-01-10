@@ -1,0 +1,437 @@
+/* sellerdashboard.php */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+}
+.sellerdashboard-sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgb(130, 130, 219);
+}
+.sellerdashboard-sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.sellerdashboard-menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.sellerdashboard-menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.sellerdashboard-menu li:hover,
+.active{
+    background: #e0e0e058;
+}
+.sellerdashboard-menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.sellerdashboard-menu a span{
+    overflow: hidden;
+}
+.sellerdashboard-menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+.sellerdashboard-main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+.sellerdashboard-header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.sellerdashboard-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.sellerdashboard-header-title{
+    color:  rgb(130, 130, 219);
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+/* secondbox container */
+.secondbox-container{
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.secondbox-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.box{
+    background: rgb(299, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 300px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.box:hover{
+    transform: translateY(-5px);
+}
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.total-data{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.total-data-value{
+    font-size: 24px;
+    font-weight: 600;
+}
+.icon{
+    color: white;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+.box-detail{
+    font-size: 18px;
+    color: #777;
+    letter-spacing: 2px;
+}
+.light-red{
+    background: rgb(251, 233, 233);
+}
+.light-purple{
+    background: rgb(254, 226, 254);
+}
+.light-green{
+    background: rgb(235, 254, 235);
+}
+.light-blue{
+    background: rgb(236, 236, 254);
+}
+.dark-red{
+    background: red;
+}
+.dark-purple{
+    background: purple;
+}
+.dark-green{
+    background: green;
+}
+.dark-blue{
+    background: blue;
+}
+
+
+
+
+/* seller/addproduct.php  and productupdate.php style */
+.addproductcontainer{
+    width: 100%;
+    height: 100%;
+}
+ .seller-product-form-container{
+    margin: 30px auto;
+    padding: 3rem;
+    border-radius: .5rem;
+    background: cornflowerblue;
+     width: 80vh;
+     height: 97vh;
+     margin-top: 0px;
+}
+.seller-product-form-container h1{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.inputbox{
+    width: 100%;
+    height: 35px;
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+    align-items: center;
+}
+.size_inputbox{
+    width: 220px;
+    height: 30px;
+    margin-left: 21px;
+    text-align: center;
+    font-size: 18px;
+}
+.inputboxone{
+    margin-left: 10px;
+    background: gray;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.suggestionbox{
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.filechoosebox{
+    margin-left: 10px;
+    color: green;
+    width: 100%;
+    background: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: .2rem 1.2rem;
+}
+.product_type{
+    font-size: 20px;
+    font-weight: bold;
+}
+.uploadproductbtn{
+    width: 50%;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 5px;
+    background: green;
+    color: white;
+    margin: 30px;
+}
+.uploadproductbtn:hover{
+    background: rgb(81, 190, 81);
+}
+.message{
+    position: sticky;
+    top: 0;
+left: 0;
+right: 0;
+padding: 15px 10px;
+background-color: var(--white);
+text-align: center;
+z-index: 1000;
+box-shadow: var(--box-shadow);
+
+}
+
+
+/* productupdate.php of buttons */
+.sellerupdate-product-form-container{
+    background: cornflowerblue;
+     width: 80vh;
+     height: 100vh;
+    margin: 30px auto;
+    padding: 3rem;
+}
+ .product_edit_btn{
+    width: 40%;
+    font-size: 20px;
+    margin: 20px;
+    background: green;
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;
+}
+.product_edit_btn:hover{
+    background: rgb(106, 106, 185);
+}
+
+.product_cancel_btn{
+    display: inline-block;
+    background: red;
+    width: 120px;
+    text-align: center;
+    padding: 3px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.product_cancel_btn:hover{
+    background: rgb(106, 106, 185);
+} 
+
+/* image margin of updateimgproduct */
+.updateimgproduct{
+    margin-left: 130px;
+    border: 5px solid white;
+}
+/* error message in updateimgproduct */
+.error-msg{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+text-align: center;
+}
+
+
+
+/* product.php */
+.sellerproduct-table-heading{
+    font-size: 30px;
+    color: rgb(106, 106, 185);
+    margin: 20px;
+}
+.addproduct_container{
+    /* background: rgb(179, 153, 179); */
+    background: white;
+    border-radius: 10px;
+}
+.addproductbtn{
+    display: block;
+    width: 15%;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-size: 20px;
+    background: rgb(112, 207, 112);
+    color: black;
+    margin-left: 905px;
+    text-decoration: none;
+    
+}
+.addproductbtn:hover{
+    background: gray;
+    color: white;
+}
+/* table */
+.addproduct_table{
+text-align: center;
+margin-left: 10px;
+margin-top: 30px;
+margin-right: 10px;
+}
+
+tr .one{
+    width: 50px;
+}
+tr .two{
+    width: 160px;
+}
+tr .three{
+    width: 90px;
+}
+tr .four{
+    width: 250px;
+}
+tr .five{
+    width: 150px;
+}
+tr .six{
+    width: 50px;
+}
+tr .seven{
+    width:180px ;
+}
+tr .eight{
+    width: 200px;
+}
+/* .tablerow{
+    background: rgb(130, 130, 219);
+} */
+
+.delete_product_btn{
+    color: red;
+    margin: 10px;
+}
+.update_product_btn{
+    color: rgb(15, 134, 134);
+    margin: 10px;
+}
+
+ /* this is  for when product is empty in product.php */
+.empty_text{
+    background: cornflowerblue;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+/* sellerdashboard.php tabular section */
+.tabular-wrapper{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.table-container{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background:  rgb(130, 130, 219);
+    color: white;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: white;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+}
